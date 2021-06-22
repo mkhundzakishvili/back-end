@@ -22,11 +22,11 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res)=>{
     Photo.destroy({
         where:{
-            url: req.params.id
+            id: req.params.id
         }
     }).then(() => {
         res.send(`id ${req.params.id} was deleted`)
-    });
+    }).catch(err=>{console.log(err)});
 })
 
 
