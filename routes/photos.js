@@ -25,7 +25,7 @@ router.delete('/:id', (req, res)=>{
             id: req.params.id
         }
     }).then(() => {
-        res.send(`id ${req.params.id} was deleted`)
+        res.json(`id ${req.params.id} was deleted`)
     }).catch(err=>{console.log(err)});
 })
 
